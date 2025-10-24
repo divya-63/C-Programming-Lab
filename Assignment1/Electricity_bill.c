@@ -1,18 +1,20 @@
 #include<stdio.h>
 int main(){
 	//calculate the electricity bill based on following conditions.
-	float units;
+	int units;
+	float bill;
 	printf("enter the units consumed:");
-	scanf("%f",&units);
+	scanf("%d",&units);
 	if(units<=100){
-		printf("Rs.%.2f is the electricity bill",units*1.5);
+	bill=units*1.5;
 }else if(units>100 && units<=200){
-	printf("Rs.%.2f is the electricity bill",units*2);
-}if(units>200 && units<=300){
-	printf("Rs.%.2f is the electricity bill",units*3);
-}if(units>300){
-	printf("Rs.%.2f is the electricity bill",units*5);
+bill=100*1.5+(units-100)*2;
+}else if(units>200 && units<=300){
+bill=100*1.5+100*2+(units-200)*3;
+}else{
+	bill=100*1.5+100*2+100*3+(units-300)*5;
 }
+printf("Electricity bill is:%.2f\n",bill);
 return 0;
 }
 
