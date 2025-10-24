@@ -26,10 +26,17 @@ int main(){
 	 printf("result:%.2f\n",result);
 	 break;
 	 case'/':
-	 	
-	 result=number1/number2;
+	 	if(number2 != 0){
+		 
 	 
+	 result=number1/number2;
 	 printf("result:%.2f\n",result);
+}else{
+
+
+	
+	 printf("error!\n");
+}
 	 break;
 	 default:
 	 	printf("invalid operator.\n");
